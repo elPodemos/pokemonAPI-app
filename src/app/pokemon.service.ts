@@ -27,8 +27,8 @@ export class PokemonService {
     return this.http.get<PokemonInterface>(this.urlGetById + id);
   }
 
-  addPokemon(user: string): Observable<PokemonInterface>{
-    return this.http.get<PokemonInterface>(this.urlGetById + user);
+  addPokemon(pokemon: PokemonInterface, user: string): Observable<PokemonInterface>{
+    return this.http.post<PokemonInterface>(this.urlAdd + user, pokemon);
   }
 
 }
