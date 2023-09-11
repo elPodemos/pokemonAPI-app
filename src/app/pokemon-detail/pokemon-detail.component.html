@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <img class="img-fluid" src="{{ pokemon?.picture }}" alt="">
+        </div>
+        <div class="col-md-4">
+            <h3 class="my-3">{{ pokemon?.name }}</h3>
+            <h3 class="my-3">Details</h3>
+            <ul>
+                <li>HP : {{ pokemon?.hp }}</li>
+                <li>CP : {{ pokemon?.cp }}</li>
+                <li>Créer le : {{ pokemon?.created }}</li>
+                <li>Types : {{ pokemon?.types }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
