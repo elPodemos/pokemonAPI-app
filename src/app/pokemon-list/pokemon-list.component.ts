@@ -14,6 +14,7 @@ export class PokemonListComponent implements OnInit {
     ){}
 
   pokemonList: PokemonInterface[] | undefined;
+  pokemon: PokemonInterface | undefined;
 
   ngOnInit(): void {
 
@@ -22,6 +23,13 @@ export class PokemonListComponent implements OnInit {
       console.table(this.pokemonList);
     });
 
+  }
+
+
+  deletePokemon(id:string){
+    this.service.deletePokemon(id).subscribe(data => {
+      console.log(data);
+    });
   }
 
 }

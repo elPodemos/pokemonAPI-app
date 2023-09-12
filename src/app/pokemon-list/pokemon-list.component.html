@@ -7,6 +7,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ pokemon.name }}</h5>
                 <a routerLink="{{pokemon.id}}">Voir le détail</a>
+                <button (click)="deletePokemon(pokemon.id)" type="button" class="btn btn-danger">Supprimer</button>
             </div>
         </div>
     </div>
